@@ -11,6 +11,7 @@ drop_down = "//*[contains(@text, 'United States')]"
 drp_dwn_india="//*[contains(@text,'India')]"
 
 sign_up = "//*[contains(@text,'Sign Up')]"
+sign_in_email_1 = '//*[contains(@text, "Sign in with Email")]'
 
 terms_of_use = "//android.view.View[4]"
 privacy_policy = "//android.view.View[5]"

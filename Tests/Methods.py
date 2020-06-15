@@ -1,7 +1,7 @@
 from appium import webdriver
 from appium.webdriver.common.touch_action import TouchAction
 import time
-from Paths import *
+from Locators import *
 
 def desired_caps():
     # Desired Capabilities of my mobile
@@ -112,7 +112,7 @@ class Login:
         drivers.find_element_by_id(sign_in_btn).click()
         time.sleep(30)
         # Clicking on 'Sign in with Email'
-        drivers.find_element_by_xpath(sign_in_email).click()
+        drivers.find_element_by_xpath(sign_in_email_1).click()
 
     # Method to write Login details
     def fill_login_details(self):

@@ -10,8 +10,8 @@ def desired_caps():
     # Desired Capabilities of my mobile
     desired_capabilities = {
         "deviceName": "1",
-        "platformName": "Android",
-        "udid": "33766e229904",
+        "platformName": input("Enter Platform Name:"),
+        "udid": input("Enter Udid no."),
         "platformVersion": "7.0",
         "appPackage": "com.bose.bosemusic",
         "appActivity": "com.bose.madrid.SplashScreenActivity"

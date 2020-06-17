@@ -9,5 +9,3 @@
    
 4. You can see locators (Paths of different android view elements) Open Locators.py file to view all locators used in the `project.
 5. You can see all methods which are used to set desired capabilities and also used for Login and SignUp.  Open Testing_Methods.py to view.
-
-

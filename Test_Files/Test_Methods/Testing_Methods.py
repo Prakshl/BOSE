@@ -1,5 +1,5 @@
 import time
-
+import sys
 from appium import webdriver
 from appium.webdriver.common.touch_action import TouchAction
 
@@ -10,8 +10,8 @@ def desired_caps():
     # Desired Capabilities of my mobile
     desired_capabilities = {
         "deviceName": "1",
-        "platformName": input("Enter Platform Name:"),
-        "udid": input("Enter Udid no."),
+        "platformName": ''.join(sys.argv[1]),
+        "udid": ''.join(sys.argv[2]),
         "platformVersion": "7.0",
         "appPackage": "com.bose.bosemusic",
         "appActivity": "com.bose.madrid.SplashScreenActivity"
@@ -129,3 +129,4 @@ class Login:
 
         # Clicking on Sign in
         drivers.find_element_by_xpath(sign_in).click()
+

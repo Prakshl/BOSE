@@ -1,9 +1,11 @@
-import time
 import sys
+import time
+
 from appium import webdriver
 from appium.webdriver.common.touch_action import TouchAction
 
-from Test_Files.Locators.Locators import *
+sys.path.insert(0, r'C:\Users\Disha\PycharmProjects\Testing')
+from Locators.Locators import *
 
 
 def desired_caps():
@@ -36,7 +38,7 @@ class Sign_up:
     # Method to fill details
     def fill_signup_details(self):
         # Writing Email ID
-        drivers.find_element_by_xpath(txt_email).send_keys("abcc43@gmail.com")
+        drivers.find_element_by_xpath(txt_email).send_keys("abcz434@gmail.com")
         time.sleep(1)
 
         # Writing Password
@@ -129,4 +131,3 @@ class Login:
 
         # Clicking on Sign in
         drivers.find_element_by_xpath(sign_in).click()
-

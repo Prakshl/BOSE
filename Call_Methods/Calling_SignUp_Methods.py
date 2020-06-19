@@ -1,5 +1,6 @@
-import time
-from Test_Files.Test_Methods.Testing_Methods import *
+import sys
+sys.path.insert(0, r'C:\Users\Disha\PycharmProjects\Testing')
+from Test_Methods.Testing_Methods import *
 
 # Calling Desired Caps function
 desired_caps()

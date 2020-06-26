@@ -21,14 +21,13 @@ class test_common_methods:
         }
         global drivers
         drivers = webdriver.Remote("http://localhost:4723/wd/hub", desired_capabilities)
-    # @pytest.mark.myprofile
 
     # Function to open Profile
     def test_open_profile(self):
         # Opening the profile
         drivers.find_element_by_id(profile).click()
 
-    # @pytest.mark.signout
+
     # Function for Signout
     def test_sign_out_btn(self):
         # Scrolling to the end for signout

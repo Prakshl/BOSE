@@ -1,44 +1,73 @@
-import sys
+from appium import webdriver
 import time
-
+import pytest
 from appium import webdriver
 from appium.webdriver.common.touch_action import TouchAction
 
-sys.path.insert(0, r'C:\Users\Disha\PycharmProjects\Testing')
 from Locators.Locators import *
 
 
-def desired_caps():
-    # Desired Capabilities of my mobile
-    desired_capabilities = {
-        "deviceName": "1",
-        "platformName": ''.join(sys.argv[1]),
-        "udid": ''.join(sys.argv[2]),
-        "platformVersion": "7.0",
-        "appPackage": "com.bose.bosemusic",
-        "appActivity": "com.bose.madrid.SplashScreenActivity"
-    }
-    global drivers
-    drivers = webdriver.Remote("http://localhost:4723/wd/hub", desired_capabilities)
+class test_common_methods:
+
+    def test_desired_caps(self, input1, input2):
+        # Desired Capabilities of my mqbile
+        desired_capabilities = {
+            "deviceName": "1",
+            "platformName": input1,
+            "udid": input2,
+            "platformVersion": "7.0",
+            "appPackage": "com.bose.bosemusic",
+            "appActivity": "com.bose.madrid.SplashScreenActivity"
+        }
+        global drivers
+        drivers = webdriver.Remote("http://localhost:4723/wd/hub", desired_capabilities)
+    # @pytest.mark.myprofile
+
+    # Function to open Profile
+    def test_open_profile(self):
+        # Opening the profile
+        drivers.find_element_by_id(profile).click()
+
+    # @pytest.mark.signout
+    # Function for Signout
+    def test_sign_out_btn(self):
+        # Scrolling to the end for signout
+        touch = TouchAction(drivers)
+        touch.press(x=484, y=1835).move_to(x=546, y=267).release().perform()
+        drivers.find_element_by_id(sign_out).click()
+
+    # Function to Allow permissions
+    def test_allow_permissions(self):
+
+        # Allow notificaton
+        drivers.find_element_by_id(allow_notification).click()
+        time.sleep(10)
+
+        # Allow Location
+        drivers.find_element_by_id(allow_location).click()
+        time.sleep(3)
+
+        # Allowing from popup
+        drivers.find_element_by_id(location_pop_up).click()
+        time.sleep(5)
 
 
-# Class for Signup, it contains all SignUp functions
 class Sign_up:
 
     # Method for sign up
-    def sign_up_btn(self):
+    def test_sign_up_btn(self):
         time.sleep(2)
         # Click on Sign up button
-        drivers.find_element_by_id(sign_up_btn).click()
+        drivers.find_element_by_id(sign_up_btn_1).click()
         time.sleep(35)
 
         # Clicking on Sign in with email
         drivers.find_element_by_xpath(sign_in_email).click()
 
     # Method to fill details
-    def fill_signup_details(self):
+    def test_fill_signup_details(self):
         # Writing Email ID
-        drivers.find_element_by_xpath(txt_email).send_keys("abcz434@gmail.com")
+        drivers.find_element_by_xpath(txt_email).send_keys("azxcvb1@gmail.com")
         time.sleep(1)
 
         # Writing Password
@@ -65,10 +94,10 @@ class Sign_up:
         drivers.find_element_by_xpath(drp_dwn_india).click()
 
         # click on SignUp button
-        drivers.find_element_by_xpath(sign_up).click()
+        drivers.find_element_by_xpath(sign_up_btn_2).click()
 
     # Method to Check all privacy radio button and click oon I Agree
-    def privacy_policy(self):
+    def test_privacy_policy(self):
         # Terms of use
         drivers.find_element_by_xpath(terms_of_use).click()
 
@@ -82,47 +111,20 @@ class Sign_up:
         drivers.find_element_by_xpath(i_agree).click()
 
 
-# Function to open Profile
-def open_profile():
-    # Opening the profile
-    drivers.find_element_by_id(profile).click()
-
-
-# Function for Signout
-def sign_out_btn():
-    # Scrolling to the end for signout
-    touch = TouchAction(drivers)
-    touch.press(x=484, y=1835).move_to(x=546, y=267).release().perform()
-    drivers.find_element_by_id(sign_out).click()
-
-
-# Function to Allow permissions
-def allow_permissions():
-    # Allow notificaton
-    drivers.find_element_by_id(allow_notification).click()
-    time.sleep(10)
-    # Allow Location
-    drivers.find_element_by_id(allow_location).click()
-    time.sleep(3)
-
-    # Allowing from popup
-    drivers.find_element_by_id(location_pop_up).click()
-    time.sleep(5)
-
-
 # Class for Login contains all Login functions
 class Login:
 
     # Method for login
-    def sign_in_btn(self):
+    def test_sign_in_btn(self):
         # Clicking on 'Sign in'
-        drivers.find_element_by_id(sign_in_btn).click()
+        drivers.find_element_by_id(sign_in_btn_1).click()
         time.sleep(30)
         # Clicking on 'Sign in with Email'
         drivers.find_element_by_xpath(sign_in_email_1).click()
 
+
     # Method to write Login details
-    def fill_login_details(self):
+    def test_fill_login_details(self):
         # Writing Login ID
         drivers.find_element_by_xpath(txt_email).send_keys("abcc@gmail.com")
 
@@ -130,4 +132,4 @@ class Login:
         drivers.find_element_by_xpath(txt_password).send_keys("Prak@123")
 
         # Clicking on Sign in
-        drivers.find_element_by_xpath(sign_in).click()
+        drivers.find_element_by_xpath(sign_in_btn_2).click()

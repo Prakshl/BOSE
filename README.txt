@@ -3,11 +3,11 @@
 1. You can Sign up or Login using two different Py File
    There User need to write appropriate PlatformName and UDID at run time.
    
-   Ex. pytest -v test_login.py --input1 PlatformName --input2 UDID  (Using -v we know that which method is currently executing and that method is passed or not.)
+   Ex. pytest -v test_login.py --platformname PlatformName --udid UDID platformversion PlatformVersion  (Using -v we know that which method is currently executing and that method is passed or not.)
          
-         pytest -v test_login.py --input1 Android --input2 5132
+         ytest -v test_login.py --platformname Android --udid 5132 platformversion 7.0
          
-          pytest -v test_login.py::test_desired_capabilities --input1 Android --input2 5132 (By using '::' only desired capabilities method will run)
+          pytest -v test_login.py::test_desired_capabilities --platformname Android --udid 5132 platformversion 7.0 (By using '::' only desired capabilities method will run)
          
 2. To SignUP:   Run test_signup.py file
 3. To Login:    Run test_login.py file

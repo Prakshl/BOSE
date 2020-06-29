@@ -9,13 +9,13 @@ from Locators.Locators import *
 
 class test_common_methods:
 
-    def test_desired_caps(self, input1, input2):
+    def test_desired_caps(self, platformname,udid, platformversion):
         # Desired Capabilities of my mqbile
         desired_capabilities = {
             "deviceName": "1",
-            "platformName": input1,
-            "udid": input2,
-            "platformVersion": "7.0",
+            "platformName": platformname,
+            "udid": udid,
+            "platformVersion": platformversion,
             "appPackage": "com.bose.bosemusic",
             "appActivity": "com.bose.madrid.SplashScreenActivity"
         }
@@ -66,7 +66,7 @@ class Sign_up:
     # Method to fill details
     def test_fill_signup_details(self):
         # Writing Email ID
-        drivers.find_element_by_xpath(txt_email).send_keys("azxcvb1@gmail.com")
+        drivers.find_element_by_xpath(txt_email).send_keys("azxc231@gmail.com")
         time.sleep(1)
 
         # Writing Password

@@ -7,8 +7,8 @@ common_obj = test_common_methods()
 
 
 # Calling Desired Caps method
-def test_desired_capabilities(input1, input2):
-    assert common_obj.test_desired_caps(input1, input2) != "NONE"
+def test_desired_capabilities(platformname, udid, platformversion):
+    assert common_obj.test_desired_caps(platformname, udid, platformversion) != "NONE"
     time.sleep(2)
 
 

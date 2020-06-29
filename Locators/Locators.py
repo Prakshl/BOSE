@@ -1,4 +1,4 @@
-sign_up_btn = "com.bose.bosemusic:id/register_button"
+sign_up_btn_1 = "com.bose.bosemusic:id/register_button"
 
 sign_in_email = '//*[contains(@text, "Sign up with Email")]'
 
@@ -10,7 +10,7 @@ txt_last_name = "//android.view.View[5]/android.widget.EditText"
 drop_down = "//*[contains(@text, 'United States')]"
 drp_dwn_india = "//*[contains(@text,'India')]"
 
-sign_up = "//*[contains(@text,'Sign Up')]"
+sign_up_btn_2 = "//*[contains(@text,'Sign Up')]"
 sign_in_email_1 = '//*[contains(@text, "Sign in with Email")]'
 
 terms_of_use = "//android.view.View[4]"
@@ -25,5 +25,5 @@ allow_notification = "com.bose.bosemusic:id/primary_button"
 allow_location = "com.bose.bosemusic:id/round_button"
 location_pop_up = "com.android.packageinstaller:id/permission_allow_button"
 
-sign_in_btn = "com.bose.bosemusic:id/login_button"
-sign_in = "//android.view.View[5]/android.widget.Button"
+sign_in_btn_1 = "com.bose.bosemusic:id/login_button"
+sign_in_btn_2 = "//android.view.View[5]/android.widget.Button"

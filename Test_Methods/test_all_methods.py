@@ -66,7 +66,7 @@ class Sign_up:
     # Method to fill details
     def test_fill_signup_details(self):
         # Writing Email ID
-        drivers.find_element_by_xpath(txt_email).send_keys("azxc231@gmail.com")
+        drivers.find_element_by_xpath(txt_email).send_keys("yhgnub6@gmail.com")
         time.sleep(1)
 
         # Writing Password

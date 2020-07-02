@@ -1,6 +1,9 @@
 from appium import webdriver
 import time
 import pytest
+import string
+import random
+
 from appium import webdriver
 from appium.webdriver.common.touch_action import TouchAction
 
@@ -65,18 +68,24 @@ class Sign_up:
 
     # Method to fill details
     def test_fill_signup_details(self):
+
+        # Generate random email id
+        email_id = string.ascii_lowercase[:20]
+        email_id =''.join(random.choice(email_id) for i in range(7))
+        email_id = email_id + '@gmail.com'
+
         # Writing Email ID
-        drivers.find_element_by_xpath(txt_email).send_keys("azxc231@gmail.com")
+        drivers.find_element_by_xpath(txt_email).send_keys(email_id)
         time.sleep(1)
 
         # Writing Password
-        drivers.find_element_by_xpath(txt_password).send_keys("Prak@123")
+        drivers.find_element_by_xpath(txt_password).send_keys("Test&mad")
 
         # Writing User Name
-        drivers.find_element_by_xpath(txt_username).send_keys("Prakshal")
+        drivers.find_element_by_xpath(txt_username).send_keys("Test")
 
         # Writing Last name
-        drivers.find_element_by_xpath(txt_last_name).send_keys("Shah")
+        drivers.find_element_by_xpath(txt_last_name).send_keys("Mad")
 
         # Opening Dropdown
         drivers.find_element_by_xpath(drop_down).click()

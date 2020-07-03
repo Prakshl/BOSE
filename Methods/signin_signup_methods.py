@@ -76,7 +76,6 @@ class Sign_up:
 
         # Writing Email ID
         drivers.find_element_by_xpath(txt_email).send_keys(email_id)
-        drivers.find_element_by_xpath(txt_email).send_keys("yhgnub6@gmail.com")
         time.sleep(1)
 
         # Writing Password

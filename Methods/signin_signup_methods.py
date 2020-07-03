@@ -75,11 +75,8 @@ class Sign_up:
         email_id = email_id + '@gmail.com'
 
         # Writing Email ID
-<<<<<<< HEAD:Methods/signin_signup_methods.py
         drivers.find_element_by_xpath(txt_email).send_keys(email_id)
-=======
         drivers.find_element_by_xpath(txt_email).send_keys("yhgnub6@gmail.com")
->>>>>>> 9d66e1e6e11479752636c1862cce828b5a7cb919:Test_Methods/test_all_methods.py
         time.sleep(1)
 
         # Writing Password

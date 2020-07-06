@@ -8,33 +8,31 @@ common_obj = test_common_methods()
 
 # Calling Desired Caps method
 def test_desired_capabilities(platformname, udid, platformversion):
-    assert common_obj.test_desired_caps(platformname, udid, platformversion) != "NONE"
+    assert common_obj.test_desired_caps(platformname, udid, platformversion) != False
 
 
 # Calling method to click on signin and sign with email
 def test_login_btn():
-    assert login_obj.test_sign_in_btn() != "NONE"
+    assert login_obj.test_sign_in_btn() != False
     time.sleep(3)
 
-
 # Calling method to write Login details
+
 def test_login_fill():
-    assert login_obj.test_fill_login_details() != "NONE"
+    assert login_obj.test_fill_login_details() != False
     time.sleep(25)
 
 
 # Calling method to Allow all required permission
 def test_allow_all_permission():
-    assert common_obj.test_allow_permissions() != "NONE"
+    assert common_obj.test_allow_permissions() != False
     time.sleep(5)
-
 
 # Calling method to open profile
 def test_open_my_profile():
-    assert common_obj.test_open_profile() != "NONE"
+    assert common_obj.test_open_profile() != False
     time.sleep(4)
-
 
 # Signout method
 def test_sign_out():
-    assert common_obj.test_sign_out_btn() != "NONE"
+    assert common_obj.test_sign_out_btn() != False

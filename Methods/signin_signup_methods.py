@@ -32,6 +32,8 @@ class test_common_methods:
             }
             global drivers
             drivers = webdriver.Remote("http://localhost:4723/wd/hub", desired_capabilities)
+            return True
+
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
             return False
 
@@ -43,6 +45,8 @@ class test_common_methods:
         try:
             # Opening the profile
             drivers.find_element_by_id(profile).click()
+            return True
+
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
             return False
 
@@ -56,6 +60,7 @@ class test_common_methods:
             touch = TouchAction(drivers)
             touch.press(x=484, y=1835).move_to(x=546, y=267).release().perform()
             drivers.find_element_by_id(sign_out).click()
+            return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
             return False
@@ -76,6 +81,7 @@ class test_common_methods:
 
             # Allowing from popup
             drivers.find_element_by_id(location_pop_up).click()
+            return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
             return False
@@ -96,6 +102,7 @@ class Sign_up:
 
             # Clicking on Sign in with email
             drivers.find_element_by_xpath(sign_in_email).click()
+            return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
             return False
@@ -141,6 +148,7 @@ class Sign_up:
 
             # click on SignUp button
             drivers.find_element_by_xpath(sign_up_btn_2).click()
+            return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
             return False
@@ -162,6 +170,7 @@ class Sign_up:
 
             # I Agree
             drivers.find_element_by_xpath(i_agree).click()
+            return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
             return False
@@ -182,6 +191,7 @@ class Login:
 
             # Clicking on 'Sign in with Email'
             drivers.find_element_by_xpath(sign_in_email_1).click()
+            return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
             return False
@@ -200,6 +210,7 @@ class Login:
 
             # Clicking on Sign in
             drivers.find_element_by_xpath(sign_in_btn_2).click()
+            return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
             return False

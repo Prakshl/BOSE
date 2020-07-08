@@ -17,7 +17,11 @@ class test_common_methods:
         """
         This method is used to create a mobile driver specific to the attached device.
         :param platformname: Mobile device platformname android/ios
+<<<<<<< HEAD
         :param udid: UDID of mobile device
+=======
+        :param udid: UDID of mobbile device
+>>>>>>> 275d044357c098e1b7617e5340cfc1ce25b1bf41
         :param platformversion: Mobile device platform verions
         """
         try:
@@ -32,19 +36,20 @@ class test_common_methods:
             }
             global drivers
             drivers = webdriver.Remote("http://localhost:4723/wd/hub", desired_capabilities)
-
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
             return False
 
     # Function to open Profile
     def test_open_profile(self):
+<<<<<<< HEAD
         """
         This method is used to open user profile.
         """
+=======
+>>>>>>> 275d044357c098e1b7617e5340cfc1ce25b1bf41
         try:
             # Opening the profile
             drivers.find_element_by_id(profile).click()
-
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
             return False
 

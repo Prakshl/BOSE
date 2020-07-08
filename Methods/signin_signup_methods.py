@@ -14,19 +14,12 @@ from Locators.Locators import *
 class test_common_methods:
 
     def test_desired_caps(self, platformname, udid, platformversion):
-        '''
-        This method is used to connect with real device.
-
-        You need to provide Platform-Name your device's UDID and Platform-Version as input to connect with your device.
-
-        In cmd you can give input as shown below,
-                    pytest -v -s test_login.py --platformname _____ --udid _______ --platformversion ___
-
-        :param platformname: Here it stores Platform-Name which passed in cmd
-        :param udid: Here it stores UDID which passed in cmd
-        :param platformversion: Here it stores Platform-Version which passed in cmd
-
-        '''
+        """
+        This method is used to create a mobile driver specific to the attached device.
+        :param platformname: Mobile device platformname android/ios
+        :param udid: UDID of mobile device
+        :param platformversion: Mobile device platform verions
+        """
         try:
             # Desired Capabilities of my mqbile
             desired_capabilities = {
@@ -45,18 +38,21 @@ class test_common_methods:
 
     # Function to open Profile
     def test_open_profile(self):
-
+        """
+        This method is used to open user profile.
+        """
         try:
             # Opening the profile
             drivers.find_element_by_id(profile).click()
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
-
             return False
 
     # Function for Signout
     def test_sign_out_btn(self):
-
+        """
+        This method is used for signing out.
+        """
         try:
             # Scrolling to the end for signout
             touch = TouchAction(drivers)
@@ -68,6 +64,9 @@ class test_common_methods:
 
     # Function to Allow permissions
     def test_allow_permissions(self):
+        """
+        This method is used to allow all permissions required by the application.
+        """
         try:
             # Allow notificaton
             drivers.find_element_by_id(allow_notification).click()
@@ -81,7 +80,6 @@ class test_common_methods:
             drivers.find_element_by_id(location_pop_up).click()
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
-
             return False
 
 
@@ -89,6 +87,9 @@ class Sign_up:
 
     # Method for sign up
     def test_sign_up_btn(self):
+        """
+        This method is used to signup using email address.
+        """
         try:
             time.sleep(2)
             # Click on Sign up button
@@ -99,11 +100,13 @@ class Sign_up:
             drivers.find_element_by_xpath(sign_in_email).click()
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
-
             return False
 
     # Method to fill details
     def test_fill_signup_details(self):
+        """
+        This method is used to fill signup details.
+        """
 
         # Generate random email id
         email_id = string.ascii_lowercase[:20]
@@ -142,12 +145,13 @@ class Sign_up:
             drivers.find_element_by_xpath(sign_up_btn_2).click()
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
-
             return False
 
-    # Method to Check all privacy radio button and click oon I Agree
+    # Method to Check all privacy radio button and click on I Agree
     def test_privacy_policy(self):
-
+        """
+        This method is used to accept privacy and policy required by the application.
+        """
         try:
             # Terms of use
             drivers.find_element_by_xpath(terms_of_use).click()
@@ -162,15 +166,17 @@ class Sign_up:
             drivers.find_element_by_xpath(i_agree).click()
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
-
             return False
 
 
 # Class for Login contains all Login functions
 class Login:
 
-    # Method for login
+    # Method for signin
     def test_sign_in_btn(self):
+        """
+        This method is used for login using email address.
+        """
         try:
             # Clicking on 'Sign in'
             drivers.find_element_by_id(sign_in_btn_1).click()
@@ -180,11 +186,13 @@ class Login:
             drivers.find_element_by_xpath(sign_in_email_1).click()
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
-
             return False
 
     # Method to write Login details
     def test_fill_login_details(self):
+        """
+        This method is used to fill login details. 
+        """
         try:
             # Writing Login ID
             drivers.find_element_by_xpath(txt_email).send_keys("abcc@gmail.com")
@@ -196,5 +204,4 @@ class Login:
             drivers.find_element_by_xpath(sign_in_btn_2).click()
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
-
             return False

@@ -37,7 +37,7 @@ class test_common_methods:
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
             return False
 
-    # Function to open Profile
+    # Function to open profile
     def test_open_profile(self):
         """
         This method is used to open user profile.

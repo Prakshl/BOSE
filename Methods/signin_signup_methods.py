@@ -14,19 +14,12 @@ from Locators.Locators import *
 class test_common_methods:
 
     def test_desired_caps(self, platformname, udid, platformversion):
-        '''
-        This method is used to connect with real device.
-
-        You need to provide Platform-Name your device's UDID and Platform-Version as input to connect with your device.
-
-        In cmd you can give input as shown below,
-                    pytest -v -s test_login.py --platformname _____ --udid _______ --platformversion ___
-
-        :param platformname: Here it stores Platform-Name which passed in cmd
-        :param udid: Here it stores UDID which passed in cmd
-        :param platformversion: Here it stores Platform-Version which passed in cmd
-
-        '''
+        """
+        This method is used to create a mobile driver specific to the attached device.
+        :param platformname: Mobile device platformname android/ios
+        :param udid: UDID of mobbile device
+        :param platformversion: Mobile device platform verions
+        """
         try:
             # Desired Capabilities of my mqbile
             desired_capabilities = {
@@ -39,19 +32,15 @@ class test_common_methods:
             }
             global drivers
             drivers = webdriver.Remote("http://localhost:4723/wd/hub", desired_capabilities)
-
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
             return False
 
     # Function to open Profile
     def test_open_profile(self):
-
         try:
             # Opening the profile
             drivers.find_element_by_id(profile).click()
-
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
-
             return False
 
     # Function for Signout

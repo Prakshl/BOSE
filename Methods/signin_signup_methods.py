@@ -1,7 +1,10 @@
 import time
 import string
 import random
+# importing module
+import logging
 
+from datetime import datetime
 from appium import webdriver
 from appium.webdriver.common.touch_action import TouchAction
 from selenium.common.exceptions import NoSuchElementException
@@ -9,6 +12,15 @@ from selenium.common.exceptions import WebDriverException
 from selenium.common.exceptions import RemoteDriverServerException
 
 from Locators.Locators import *
+
+dt_string=datetime.now()
+dt_string=dt_string.strftime("%d-%m-%Y-%H_%M_%S")
+# Create and configure logger
+logging.basicConfig(filename=dt_string+".log",
+                    format='%(asctime)s %(message)s',
+                    filemode='w')
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
 
 
 class test_common_methods:
@@ -32,9 +44,11 @@ class test_common_methods:
             }
             global drivers
             drivers = webdriver.Remote("http://localhost:4723/wd/hub", desired_capabilities)
+            logger.info("Passed: test_desired_caps")
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+            logger.error("Failed: test_desired_caps")
             return False
 
     # Function to open profile
@@ -45,9 +59,11 @@ class test_common_methods:
         try:
             # Opening the profile
             drivers.find_element_by_id(profile).click()
+            logger.info("Passed: test_open_profile")
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+            logger.error("Failed: test_open_profile")
             return False
 
     # Function for Signout
@@ -60,9 +76,11 @@ class test_common_methods:
             touch = TouchAction(drivers)
             touch.press(x=484, y=1835).move_to(x=546, y=267).release().perform()
             drivers.find_element_by_id(sign_out).click()
+            logger.info("Passed: test_sign_out_btn")
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+            logger.error("Failed: test_sign_out_btn")
             return False
 
     # Function to Allow permissions
@@ -81,9 +99,11 @@ class test_common_methods:
 
             # Allowing from popup
             drivers.find_element_by_id(location_pop_up).click()
+            logger.info("Passed: test_allow_permissions")
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+            logger.error("Failed: test_allow_permissions")
             return False
 
 
@@ -102,9 +122,11 @@ class Sign_up:
 
             # Clicking on Sign in with email
             drivers.find_element_by_xpath(sign_in_email).click()
+            logger.info("Passed: test_sign_up_btn")
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+            logger.error("Failed: test_sign_up_btn")
             return False
 
     # Method to fill details
@@ -148,9 +170,11 @@ class Sign_up:
 
             # click on SignUp button
             drivers.find_element_by_xpath(sign_up_btn_2).click()
+            logger.info("Passed: test_fill_signup_details")
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+            logger.error("Failed: test_fill_signup_details")
             return False
 
     # Method to Check all privacy radio button and click on I Agree
@@ -170,9 +194,11 @@ class Sign_up:
 
             # I Agree
             drivers.find_element_by_xpath(i_agree).click()
+            logger.info("Passed: test_privacy_policy")
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+            logger.error("Failed: test_privacy_policy")
             return False
 
 
@@ -191,9 +217,11 @@ class Login:
 
             # Clicking on 'Sign in with Email'
             drivers.find_element_by_xpath(sign_in_email_1).click()
+            logger.info("Passed: test_sign_in_btn")
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+            logger.error("Failed: test_sign_in_btn")
             return False
 
     # Method to write Login details
@@ -210,7 +238,9 @@ class Login:
 
             # Clicking on Sign in
             drivers.find_element_by_xpath(sign_in_btn_2).click()
+            logger.info("Passed: test_fill_login_details")
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+            logger.error("Failed: test_fill_login_details")
             return False

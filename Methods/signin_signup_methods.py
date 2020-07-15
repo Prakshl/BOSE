@@ -1,11 +1,7 @@
 import time
 import string
 import random
-import os
-import logging
-import sys
 
-from datetime import datetime
 from appium import webdriver
 from appium.webdriver.common.touch_action import TouchAction
 from selenium.common.exceptions import NoSuchElementException
@@ -13,70 +9,7 @@ from selenium.common.exceptions import WebDriverException
 from selenium.common.exceptions import RemoteDriverServerException
 
 from Locators.Locators import *
-
-
-class log(object):
-
-    def __init__(self, func):
-        self.func = func
-
-    def __call__(self, *args, **kwargs):
-
-        # formate string in day-month-year and hrs-min-sec manner
-        dt_string = datetime.now()
-        dt_string = dt_string.strftime("%d/%m/%Y--%H:%M:%S")
-        # Start time
-        start = datetime.now()
-        # Call Function
-        func_call = self.func(self, *args, **kwargs)
-        # Function name
-        func_name = self.func.__name__
-        # End time
-        end = datetime.now()
-
-        # Message to be passed in log file
-        message = """
-                    Function: {}
-                    Execution Time : {}
-                    Memory : {} bytes
-                    Date : {}
-        """.format(func_name,
-                   end - start,
-                   sys.getsizeof(self.func),
-                   dt_string)
-        # Getting current working directory
-        cwd = os.getcwd()
-
-        # assign folder name to the object
-        folder = 'log'
-        newpath = os.path.join(cwd, folder)
-
-        # try and except block if the directory exists
-        try:
-
-            # make directory if it doesn't exists
-            os.mkdir(newpath)
-            # call method to write logs in file
-            self.write_file(newpath,message)
-
-        except:
-           # call method to write logs in file
-           self.write_file(newpath,message)
-
-        return func_call
-
-    def write_file(self,newpath,message):
-            # creating the logging object
-            logger = logging.getLogger()
-            logger.setLevel(logging.DEBUG)
-
-            # set logging file handller
-            fh = logging.FileHandler('{}/log.log'.format(newpath))
-            fh.setLevel(logging.DEBUG)
-
-            # add handler to logger
-            logger.addHandler(fh)
-            logger.debug(message)
+from Log.log import *
 
 class test_common_methods:
 

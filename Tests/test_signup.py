@@ -26,7 +26,7 @@ def test_signup_fill():
 # Calling function to tick all privacy policy and click on I Agree
 def test_privacy_policies():
     assert signup_obj.test_privacy_policy()
-    time.sleep(56)
+    time.sleep(54)
 
 
 # Calling function to Allow all required permission

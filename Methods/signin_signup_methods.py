@@ -30,6 +30,7 @@ class test_common_methods:
                 "platformVersion": platformversion,
                 "appPackage": "com.bose.bosemusic",
                 "appActivity": "com.bose.madrid.SplashScreenActivity"
+                "automationName": "UiAutomator1"
             }
             global drivers
             drivers = webdriver.Remote("http://localhost:4723/wd/hub", desired_capabilities)

@@ -38,7 +38,7 @@ def test_allow_allpermissions():
 # Calling function to open profile
 def test_open_my_profile():
     assert common_obj.test_open_profile()
-    time.sleep(3)
+    time.sleep(5)
 
 
 # Signout Function

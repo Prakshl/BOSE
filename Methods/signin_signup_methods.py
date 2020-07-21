@@ -28,8 +28,6 @@ class test_common_methods:
                 "platformName": platformname,
                 "udid": udid,
                 "platformVersion": platformversion,
-                #"automationName": "Appium"
-                "automationName": "UiAutomator1",
                 "appPackage": "com.bose.bosemusic",
                 "appActivity": "com.bose.madrid.SplashScreenActivity"
             }

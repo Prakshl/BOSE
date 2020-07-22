@@ -12,7 +12,7 @@ pipeline{
         stage('run_pytest'){
             steps{
                 sh"pwd"
-                bat "pytest -v -s test_login.py --platformname Android --udid 33766e229904 --platformversion 7.0"
+                sh 'pytest -v -s test_login.py --platformname Android --udid 33766e229904 --platformversion 7.0'
             }
         }
     }

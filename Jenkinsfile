@@ -1,6 +1,13 @@
 pipeline{
     agent any
     stages{
+        stage('build'){
+            steps{
+                sh 'pip install pytest'
+            }
+        }
+          
+        
         stage('change_folder'){
             steps{
                dir('Test') {

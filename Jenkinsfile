@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('build'){
             steps{
-                sh 'pip install pytest'
+                sh"pip install pytest"
             }
         }
           
@@ -19,7 +19,7 @@ pipeline{
         stage('run_pytest'){
             steps{
                 sh"pwd"
-                sh 'pytest -v -s test_login.py --platformname Android --udid 33766e229904 --platformversion 7.0'
+                sh"pytest -v -s test_login.py --platformname Android --udid 33766e229904 --platformversion 7.0"
             }
         }
     }

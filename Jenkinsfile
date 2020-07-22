@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('change_folder'){
             steps{
-               dir('\Test') {
+               dir('Test') {
                 sh"pwd"
               }
             }

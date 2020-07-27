@@ -1,18 +1,18 @@
 pipeline{
+    
     agent any
-    stages{
         
+    stages{
         stage('run_py'){
             steps{
-                bat"""cd Tests
-                      pytest -v test_signup.py --platformname Android --udid 33766e229904 --platformversion 7.0
-                """
-                
-               
-                
+                bat """
+                   cd Tests
+                   pytest -v -s test_login.py --platformname Android --udid 988a90363239513753 --platformversion 8.0.0
+                  
+                """  
             }
         }
-        
       
     }
+        
 }

@@ -24,7 +24,7 @@ class test_common_methods:
         try:
             # Desired Capabilities of my mqbile
             desired_capabilities = {
-                "deviceName": "1",
+                "deviceName": "Samsung",
                 "platformName": platformname,
                 "udid": udid,
                 "platformVersion": platformversion,

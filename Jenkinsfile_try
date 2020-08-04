@@ -1,9 +1,18 @@
 pipeline{
     
     agent any
-        
     stages{
-         stage("Appium-start"){
+        stage("Installing Requirements"){
+            steps{
+                sh """python3 -m venv virtual_env
+                source virtual_env/bin/activate
+                pip install -r requirements.txt
+                """
+            }
+        }
+    }
+    stages{
+         stage("Starting-Appium"){
             steps{
                 sh "appium"
             }
@@ -11,9 +20,9 @@ pipeline{
         stage('run_py'){
             steps{
                 sh """
-                   cd Tests
-                   pytest -v -s test_login.py --platformname Android --udid 988a90363239513753 --platformversion 8.0.0
-                  
+                
+                  pytest -v -s Tests/test_login.py --platformname Android --udid 988a90363239513753 --platformversion 8.0.0 
+                  deactivate
                 """  
             }
         }

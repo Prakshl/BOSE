@@ -10,8 +10,7 @@ pipeline{
                 """
             }
         }
-    }
-    stages{
+
          stage("Starting-Appium"){
             steps{
                 sh "appium"

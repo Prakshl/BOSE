@@ -6,8 +6,8 @@ pipeline{
         stage("Installing Requirements & run pytest"){
             steps{
                 
-                sh """appium &
-                sleep 15
+                sh """
+                appium &
                 python3 -m venv test_environment
                 . test_environment/bin/activate
                 pip install -r requirements.txt

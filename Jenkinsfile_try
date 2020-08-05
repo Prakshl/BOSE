@@ -2,6 +2,13 @@ pipeline{
     
     agent any
     stages{
+    
+         stage("Starting-Appium"){
+            steps{
+                sh """appium --version
+                appium"""
+            }
+        }
         stage("Installing Requirements"){
             steps{
                 
@@ -13,12 +20,6 @@ pipeline{
             }
         }
 
-         stage("Starting-Appium"){
-            steps{
-                sh """appium --version
-                appium"""
-            }
-        }
         stage('run_py'){
             steps{
                 sh """

@@ -2,7 +2,7 @@ pipeline{
     
     agent { label 'E2E_D_AirPlayMacMini' }
   
-            
+    stages{        
 
         stage("Installing Requirements & run pytest"){
             steps{

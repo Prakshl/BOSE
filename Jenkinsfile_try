@@ -24,7 +24,7 @@ pipeline{
         stage('run_py'){
             steps{
                 sh """
-                
+                  python --version
                   pytest Tests/test_login.py -v -s --platformname Android --udid 988a90363239513753 --platformversion 8.0.0 
                   deactivate
                 """  

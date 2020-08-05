@@ -15,7 +15,7 @@ pipeline{
 
          stage("Starting-Appium"){
             steps{
-                sh "appium --address 127.0.0.1 --port 4723 "
+                sh "appium"
             }
         }
         stage('run_py'){

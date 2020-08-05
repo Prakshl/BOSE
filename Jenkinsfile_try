@@ -5,8 +5,7 @@ pipeline{
     
          stage("Starting-Appium"){
             steps{
-                sh "
-                appium"
+                sh "appium"
             }
         }
         stage("Installing Requirements"){

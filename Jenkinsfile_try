@@ -22,7 +22,7 @@ pipeline{
             steps{
                 sh """
                 
-                  pytest -v -s Tests/test_login.py --platformname Android --udid 988a90363239513753 --platformversion 8.0.0 
+                  pytest Tests/test_login.py -v -s --platformname Android --udid 988a90363239513753 --platformversion 8.0.0 
                   deactivate
                 """  
             }

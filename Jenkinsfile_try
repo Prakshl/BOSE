@@ -5,7 +5,7 @@ pipeline{
     
          stage("Starting-Appium"){
             steps{
-                sh """appium --version
+                sh """deactivate
                 appium"""
             }
         }

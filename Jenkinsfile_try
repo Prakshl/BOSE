@@ -14,7 +14,7 @@ pipeline{
             steps{
                 
                 sh """
-                virtualenv env_test -p python3 
+                python3 -m venv test_env
                 . env_test/bin/activate
                 pip install -r requirements.txt
                 """

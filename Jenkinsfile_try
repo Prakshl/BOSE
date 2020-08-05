@@ -1,6 +1,6 @@
 pipeline{
     
-    agent any
+    agent { label 'E2E_D_AirPlayMacMini' }
     stages{
     
          stage("Starting-Appium"){

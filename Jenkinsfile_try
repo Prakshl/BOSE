@@ -2,18 +2,12 @@ pipeline{
     
     agent { label 'E2E_D_AirPlayMacMini' }
     stages{
-    
-         stage("Starting-Appium"){
-            steps{
-                sh """appium &
-                sleep 15
-                """
-            }
-        }
+
         stage("Installing Requirements & run pytest"){
             steps{
                 
-                sh """
+                sh """appium &
+                sleep 15
                 python3 -m venv test_environment
                 . test_environment/bin/activate
                 pip install -r requirements.txt

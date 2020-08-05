@@ -8,8 +8,7 @@ pipeline{
             steps{
                 
                 sh """
-                appium &
-                sleep 6
+               
                 python3 -m venv test_environment
                 . test_environment/bin/activate
                 pip install -r requirements.txt

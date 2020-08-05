@@ -15,7 +15,8 @@ pipeline{
 
          stage("Starting-Appium"){
             steps{
-                sh "appium"
+                sh """appium --version
+                appium"""
             }
         }
         stage('run_py'){

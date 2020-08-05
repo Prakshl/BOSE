@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage("Installing Requirements"){
             steps{
-                sh """python3.7 --version
+                sh """python3 --version
                 virtualenv --version
                 python3 -m venv virtual_env
                 source virtual_env/bin/activate

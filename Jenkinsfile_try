@@ -4,8 +4,8 @@ pipeline{
     stages{
         stage("Installing Requirements"){
             steps{
-                sudo apt-get install python3-venv
-                sh """
+                
+                sh """sudo apt-get install python3-venv
                 python3 --version
                 virtualenv --version
                 python3 -m venv virtual_env

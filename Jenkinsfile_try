@@ -5,7 +5,7 @@ pipeline{
         stage("Installing Requirements"){
             steps{
                 
-                sh """virtualenv -p python3 virtual_env
+                sh """python3 -m venv virtual_env
                 source virtual_env/bin/activate
                 pip install -r requirements.txt
                 """

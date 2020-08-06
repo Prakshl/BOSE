@@ -225,6 +225,8 @@ class Login:
         This method is used to fill login details.
         """
         try:
+            activity = drivers.current_activity
+            print("Current activity is:: ",activity)
             # Writing Login ID
             drivers.find_element_by_xpath(txt_email).send_keys("abcc@gmail.com")
 

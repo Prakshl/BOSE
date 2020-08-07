@@ -99,7 +99,7 @@ class test_common_methods:
 def screenshot():
    
     # Make screenshot folder and save screenshot 
-    newpath = os.path.join(cwd, 'Screenshot')
+    newpath = os.path.join(os.getcwd(), 'Screenshot')
     os.makedirs(newpath, exist_ok=True)
     ss_time = time.strftime('%d_%m_%Y_%H%M%S')
     activity_name=drivers.current_activity

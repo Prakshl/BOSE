@@ -228,14 +228,7 @@ class Login:
             activity = drivers.current_activity
             print("Current activity is:: ",activity)
             # Writing Login ID
-#             email_btn = drivers.find_element_by_xpath(txt_email).set_value("abcc@gmail.com")
-
-
-
-            email_btn=drivers.find_element_by_xpath(txt_email)   
-            drivers.click(email_btn)  
-            email_btn.send_keys("abcc@gmail.com")
-
+            email_btn = drivers.find_element_by_xpath(txt_email).set_value("abcc@gmail.com")
 
             # Writing Password
             drivers.find_element_by_xpath(txt_password).set_value("Prak@123")

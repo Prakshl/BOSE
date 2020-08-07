@@ -96,14 +96,14 @@ class test_common_methods:
 
             return False
         
-def test_screenshot():
+def screenshot():
    
     # Make screenshot folder and save screenshot 
-    self.newpath = os.path.join(cwd, 'Screenshot')
-    os.makedirs(self.newpath, exist_ok=True)
+    newpath = os.path.join(cwd, 'Screenshot')
+    os.makedirs(newpath, exist_ok=True)
     ss_time = time.strftime('%d_%m_%Y_%H%M%S')
     activity_name=drivers.current_activity
-    drivers.save_screenshot(ss_time)
+    drivers.save_screenshot(newpath+'/'+activity_name+ss_time+'.png')
     
         
 
@@ -193,7 +193,7 @@ class Sign_up:
             # Privacy Policy
             drivers.find_element_by_xpath(privacy_policy).click()
 
-            # End User Licence Agreement
+            # End User License Agreement
             drivers.find_element_by_xpath(licence_agreement).click()
 
             # I Agree
@@ -238,7 +238,7 @@ class Login:
         try:
             activity = drivers.current_activity
             print("Current activity is:: ",activity)
-
+            screenshot()
             # Writing Login ID
             drivers.find_element_by_xpath(txt_email).send_keys("abcc@gmail.com")
 
@@ -251,5 +251,5 @@ class Login:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
-            test_screenshot()
+            screenshot()
             return False

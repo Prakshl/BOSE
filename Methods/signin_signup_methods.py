@@ -95,6 +95,17 @@ class test_common_methods:
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
 
             return False
+        
+    def test_screenshot(self):
+       
+        # Make screenshot folder and save screenshot 
+        self.newpath = os.path.join(cwd, 'Screenshot')
+        os.makedirs(self.newpath, exist_ok=True)
+        ss_time = time.strftime('%d_%m_%Y_%H%M%S')
+        activity_name=drivers.current_activity
+        drivers.save_screenshot(ss_time)
+        
+            
 
 
 class Sign_up:
@@ -239,5 +250,5 @@ class Login:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
-
+            test_common_methods.test_screenshot()
             return False

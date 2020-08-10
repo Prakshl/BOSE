@@ -241,14 +241,14 @@ class Login:
             # Writing Login ID
             if(drivers.find_element_by_xpath(txt_email).size>0):
                 print('present')
-                drivers.find_element_by_xpath(txt_email).send_keys("abcc@gmail.com")
+#                 drivers.find_element_by_xpath(txt_email).send_keys("abcc@gmail.com")
             else:
                 print('Not present')
-            # Writing Password
-            drivers.find_element_by_xpath(txt_password).send_keys("Prak@123")
-
-            # Clicking on Sign in
-            drivers.find_element_by_xpath(sign_in_btn_2).click()
+#             # Writing Password
+#             drivers.find_element_by_xpath(txt_password).send_keys("Prak@123")
+# 
+#             # Clicking on Sign in
+#             drivers.find_element_by_xpath(sign_in_btn_2).click()
 
             return True
 

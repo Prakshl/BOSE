@@ -238,9 +238,8 @@ class Login:
         try:
             activity = drivers.current_activity
             print("Current activity is:: ",activity)
-            screenshot()
             # Writing Login ID
-            if( drivers.find_element_by_xpath(txt_email).is_displayed()):
+            if(drivers.find_element_by_xpath(txt_email).is_displayed()):
                 print('present')
                 drivers.find_element_by_xpath(txt_email).send_keys("abcc@gmail.com")
             else:

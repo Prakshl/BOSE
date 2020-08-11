@@ -79,6 +79,10 @@ class test_common_methods:
         This method is used to allow all permissions required by the application.
         """
         try:
+            
+            activity = drivers.current_activity
+            print("Current activity is:: ",activity)
+            
             # Allow notificaton
             drivers.find_element_by_id(allow_notification).click()
             time.sleep(10)

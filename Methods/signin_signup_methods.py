@@ -99,7 +99,14 @@ class test_common_methods:
 
             return False
            
-
+def screenshot():
+   
+    # Make screenshot folder and save screenshot 
+    newpath = os.path.join(os.getcwd(), 'Screenshot')
+    os.makedirs(newpath, exist_ok=True)
+    ss_time = time.strftime('%d_%m_%Y_%H%M%S')
+    activity_name=drivers.current_activity
+    drivers.save_screenshot(newpath+'/'+activity_name+ss_time+'.png')
             
 class Sign_up:
 
@@ -137,6 +144,7 @@ class Sign_up:
         email_id = email_id + '@gmail.com'
 
         try:
+            screenshot()
             # Writing Email ID
             drivers.find_element_by_xpath(txt_email).send_keys(email_id)
             time.sleep(1)

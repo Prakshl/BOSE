@@ -157,11 +157,11 @@ class Sign_up:
 
             # Writing Last name
             drivers.find_element_by_xpath(txt_last_name).send_keys("Mad")
-
+            screenshot()
             # Opening Dropdown
             drivers.find_element_by_xpath(drop_down).click()
             time.sleep(3)
-
+            screenshot()
             touch = TouchAction(drivers)
 
             # Looping elements until India not shown into frame (15 times)

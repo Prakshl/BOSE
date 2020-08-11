@@ -46,6 +46,7 @@ class test_common_methods:
         This method is used to open user profile.
         """
         try:
+            screenshot()
             # Opening the profile
             drivers.find_element_by_id(profile).click()
             return True
@@ -79,6 +80,7 @@ class test_common_methods:
         This method is used to allow all permissions required by the application.
         """
         try:
+            screenshot()
             activity = drivers.current_activity
             print("Current activity is:: ",activity)
             
@@ -169,10 +171,8 @@ class Sign_up:
                 drivers.swipe(100,700,100,150)
 #                 touch.press(x=492, y=1055).move_to(x=492, y=771).release().perform()
                 time.sleep(2)
-            screenshot()
             # Selecting the India from Dropdown menu
             drivers.find_element_by_xpath(drp_dwn_india).click()
-            screenshot()
 
             # click on SignUp button
             drivers.find_element_by_xpath(sign_up_btn_2).click()

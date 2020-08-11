@@ -166,7 +166,8 @@ class Sign_up:
 
             # Looping elements until India not shown into frame (15 times)
             for i in range(3):
-                touch.press(x=492, y=1055).move_to(x=492, y=771).release().perform()
+                drivers.swipe(100,700,100,150)
+#                 touch.press(x=492, y=1055).move_to(x=492, y=771).release().perform()
                 time.sleep(2)
             screenshot()
             # Selecting the India from Dropdown menu

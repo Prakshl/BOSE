@@ -144,29 +144,29 @@ class Sign_up:
         email_id = email_id + '@gmail.com'
 
         try:
-            screenshot()
+            
             # Writing Email ID
             drivers.find_element_by_xpath(txt_email).send_keys(email_id)
             time.sleep(1)
 
             # Writing Password
             drivers.find_element_by_xpath(txt_password).send_keys("Test&mad")
-            screenshot()
+            
             # Writing User Name
             drivers.find_element_by_xpath(txt_username).send_keys("Test")
-            screenshot()
+
             # Writing Last name
             drivers.find_element_by_xpath(txt_last_name).send_keys("Mad")
-            screenshot()
+            
             # Opening Dropdown
             drivers.find_element_by_xpath(drop_down).click()
             time.sleep(3)
-            screenshot()
+            
             touch = TouchAction(drivers)
 
             # Looping elements until India not shown into frame (15 times)
             for i in range(3):
-                touch.press(x=475, y=1551).move_to(x=459, y=284).release().perform()
+                touch.press(x=492, y=1055).move_to(x=492, y=771).release().perform()
                 time.sleep(2)
             screenshot()
             # Selecting the India from Dropdown menu

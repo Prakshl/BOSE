@@ -249,6 +249,8 @@ class Login:
 
 #             # Writing Password
             drivers.find_element_by_xpath(txt_password).send_keys("Prak@123")
+            # Hide keyboard
+            drivers.hide_keyboard()
 
 #             # Clicking on Sign in
             drivers.find_element_by_xpath(sign_in_btn_2).click()

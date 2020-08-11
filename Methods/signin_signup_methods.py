@@ -237,12 +237,13 @@ class Login:
             # Writing Login ID
             drivers.find_element_by_xpath(txt_email).send_keys("abcc@gmail.com")
 
-#             # Writing Password
+            # Writing Password
             drivers.find_element_by_xpath(txt_password).send_keys("Prak@123")
+          
             # Hide keyboard
             drivers.hide_keyboard()
 
-#             # Clicking on Sign in
+            # Clicking on Sign in
             drivers.find_element_by_xpath(sign_in_btn_2).click()
 
             return True

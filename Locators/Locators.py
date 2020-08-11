@@ -2,13 +2,15 @@ sign_up_btn_1 = "com.bose.bosemusic:id/register_button"
 
 sign_in_email = '//*[contains(@text, "Sign up with Email")]'
 
-# txt_email = "//android.view.View[2]/android.widget.EditText"
 txt_email = '(//*[@class="android.widget.EditText"])[1]'
 txt_password = '(//*[@class="android.widget.EditText"])[2]'
-# txt_password = "//android.view.View[3]/android.widget.EditText"
 
-txt_username = "//android.view.View[4]/android.widget.EditText"
-txt_last_name = "//android.view.View[5]/android.widget.EditText"
+# txt_username = "//android.view.View[4]/android.widget.EditText"
+# txt_last_name = "//android.view.View[5]/android.widget.EditText"
+
+txt_username = '(//*[@class="android.widget.EditText"])[3]'
+txt_last_name = '(//*[@class="android.widget.EditText"])[4]'
+
 drop_down = "//*[contains(@text, 'United States')]"
 drp_dwn_india = "//*[contains(@text,'India')]"
 

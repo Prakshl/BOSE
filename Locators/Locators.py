@@ -28,4 +28,4 @@ allow_location = "com.bose.bosemusic:id/round_button"
 location_pop_up = "com.android.packageinstaller:id/permission_allow_button"
 
 sign_in_btn_1 = "com.bose.bosemusic:id/login_button"
-sign_in_btn_2 = "//android.view.View[5]/android.widget.Button"
+sign_in_btn_2 = '(//*[@class="android.widget.Button"])[1]'

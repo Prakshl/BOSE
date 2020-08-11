@@ -17,10 +17,10 @@ drp_dwn_india = "//*[contains(@text,'India')]"
 sign_up_btn_2 = "//*[contains(@text,'Sign Up')]"
 sign_in_email_1 = '//*[contains(@text, "Sign in with Email")]'
 
-terms_of_use = "//android.view.View[4]"
-privacy_policy = "//android.view.View[5]"
-licence_agreement = "//android.view.View[6]"
-i_agree = "//android.view.View[7]"
+terms_of_use = "//android.view.View[@index='5']"
+privacy_policy = "//android.view.View[@index='6']"
+licence_agreement = "//android.view.View[@index='7']"
+i_agree = "//android.widget.Button[@text='I Agree']"
 
 profile = "com.bose.bosemusic:id/item_account_settings"
 sign_out = "com.bose.bosemusic:id/button"

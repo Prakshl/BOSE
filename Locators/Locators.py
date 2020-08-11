@@ -23,7 +23,7 @@ licence_agreement = "//android.view.View[@index='7']"
 i_agree = "//android.widget.Button[@text='I Agree']"
 
 # profile = "com.bose.bosemusic:id/item_account_settings"
-profile = ('//*[@class="android.widget.TextView"])[1]'
+profile = '(//*[@class="android.widget.TextView"])[1]'
 sign_out = "com.bose.bosemusic:id/button"
 
 allow_notification = "com.bose.bosemusic:id/primary_button"

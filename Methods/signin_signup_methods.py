@@ -95,19 +95,8 @@ class test_common_methods:
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
 
             return False
-        
-def screenshot():
-   
-    # Make screenshot folder and save screenshot 
-    newpath = os.path.join(os.getcwd(), 'Screenshot')
-    os.makedirs(newpath, exist_ok=True)
-    ss_time = time.strftime('%d_%m_%Y_%H%M%S')
-    activity_name=drivers.current_activity
-    drivers.save_screenshot(newpath+'/'+activity_name+ss_time+'.png')
-    
-        
-
-
+           
+            
 class Sign_up:
 
     @log
@@ -240,24 +229,17 @@ class Login:
             print("Current activity is:: ",activity)
             
             email_test_1 = drivers.find_element_by_xpath(txt_email)
-            if(email_test_1.is_displayed()):
-                print('Yes')
-            else:
-                print('no')
+           
             # Writing Login ID
-#             if(drivers.find_element_by_xpath(txt_email).size>0):
-#                 print('present')
-# #                 drivers.find_element_by_xpath(txt_email).send_keys("abcc@gmail.com")
-#             else:
-#                 print('Not present')
+            drivers.find_element_by_xpath(txt_email).send_keys("abcc@gmail.com")
+
 #             # Writing Password
-#             drivers.find_element_by_xpath(txt_password).send_keys("Prak@123")
-# 
+            drivers.find_element_by_xpath(txt_password).send_keys("Prak@123")
+
 #             # Clicking on Sign in
-#             drivers.find_element_by_xpath(sign_in_btn_2).click()
+            drivers.find_element_by_xpath(sign_in_btn_2).click()
 
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
-            screenshot()
             return False

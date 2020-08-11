@@ -151,10 +151,10 @@ class Sign_up:
 
             # Writing Password
             drivers.find_element_by_xpath(txt_password).send_keys("Test&mad")
-
+            screenshot()
             # Writing User Name
             drivers.find_element_by_xpath(txt_username).send_keys("Test")
-
+            screenshot()
             # Writing Last name
             drivers.find_element_by_xpath(txt_last_name).send_keys("Mad")
             screenshot()

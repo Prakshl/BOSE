@@ -165,7 +165,7 @@ class Sign_up:
             touch = TouchAction(drivers)
 
             # Looping elements until India not shown into frame (15 times)
-            for i in range(8):
+            for i in range(3):
                 touch.press(x=475, y=1551).move_to(x=459, y=284).release().perform()
                 time.sleep(2)
             screenshot()

@@ -168,9 +168,10 @@ class Sign_up:
             for i in range(15):
                 touch.press(x=475, y=1551).move_to(x=459, y=284).release().perform()
                 time.sleep(2)
-
+            screenshot()
             # Selecting the India from Dropdown menu
             drivers.find_element_by_xpath(drp_dwn_india).click()
+            screenshot()
 
             # click on SignUp button
             drivers.find_element_by_xpath(sign_up_btn_2).click()

@@ -48,7 +48,7 @@ class test_common_methods:
         try:
             screenshot()
             # Opening the profile
-            drivers.find_element_by_id(profile).click()
+            drivers.find_element_by_xpath(profile).click()
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):

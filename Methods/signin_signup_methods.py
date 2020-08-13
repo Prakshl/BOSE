@@ -94,9 +94,6 @@ class test_common_methods:
 
             # Allowing from popup
             drivers.find_element_by_id(location_pop_up).click()
-            screenshot()
-            # I agree
-            drivers.find_element_by_xpath(i_agree).click()
 
             return True
 

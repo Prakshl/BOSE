@@ -48,7 +48,7 @@ class test_common_methods:
         try:
             
             # Opening the profile
-            drivers.find_element_by_xpath(profile).click()
+            drivers.find_element_by_id(profile).click()
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
@@ -200,7 +200,7 @@ class Sign_up:
             drivers.find_element_by_xpath(licence_agreement).click()
 
             # I Agree
-            drivers.find_elements_by_accessibility_id(i_agree).click()
+            drivers.find_element_by_id(i_agree).click()
 
             return True
 

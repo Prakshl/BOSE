@@ -200,7 +200,7 @@ class Sign_up:
             drivers.find_element_by_xpath(licence_agreement).click()
 
             # I Agree
-            drivers.find_element_by_xpath(i_agree).click()
+            drivers.find_element_by_id(i_agree).click()
 
             return True
 

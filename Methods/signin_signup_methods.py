@@ -36,7 +36,7 @@ class test_common_methods:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
-
+        
             return False
 
     # Function to open profile
@@ -46,13 +46,13 @@ class test_common_methods:
         This method is used to open user profile.
         """
         try:
-            screenshot()
+            
             # Opening the profile
             drivers.find_element_by_xpath(profile).click()
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
-
+            screenshot()
             return False
 
     @log
@@ -62,7 +62,7 @@ class test_common_methods:
         This method is used for signing out.
         """
         try:
-            screenshot()
+            
             # Scrolling to the end for signout
             touch = TouchAction(drivers)
             touch.press(x=484, y=1835).move_to(x=546, y=267).release().perform()
@@ -71,7 +71,7 @@ class test_common_methods:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
-
+            screenshot()
             return False
 
     @log
@@ -98,7 +98,7 @@ class test_common_methods:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
-
+            screenshot()
             return False
            
 def screenshot():
@@ -130,7 +130,7 @@ class Sign_up:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
-
+            screenshot()
             return False
 
     @log
@@ -180,7 +180,7 @@ class Sign_up:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
-
+            screenshot()
             return False
 
     @log
@@ -205,7 +205,7 @@ class Sign_up:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
-
+            screenshot()
             return False
 
 
@@ -229,7 +229,7 @@ class Login:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
-
+            screenshot()
             return False
 
     @log
@@ -259,4 +259,5 @@ class Login:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+            screenshot()
             return False

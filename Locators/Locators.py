@@ -5,9 +5,6 @@ sign_in_email = '//*[contains(@text, "Sign up with Email")]'
 txt_email = '(//*[@class="android.widget.EditText"])[1]'
 txt_password = '(//*[@class="android.widget.EditText"])[2]'
 
-# txt_username = "//android.view.View[4]/android.widget.EditText"
-# txt_last_name = "//android.view.View[5]/android.widget.EditText"
-
 txt_username = '(//*[@class="android.widget.EditText"])[3]'
 txt_last_name = '(//*[@class="android.widget.EditText"])[4]'
 
@@ -20,11 +17,8 @@ sign_in_email_1 = '//*[contains(@text, "Sign in with Email")]'
 terms_of_use = "//android.view.View[@index='5']"
 privacy_policy = "//android.view.View[@index='6']"
 licence_agreement = "//android.view.View[@index='7']"
-# i_agree = '(//*[@class="android.widget.button"])[1]'
 i_agree = 'gigya-privacy-accept'
 
-# profile = '//android.widget.TextView[@content-desc="Bose Account, button"]'
-# profile = '(//*[@class="android.widget.TextView"])[1]'
 profile = 'Bose Account, button'
 sign_out = "com.bose.bosemusic:id/button"
 

@@ -62,6 +62,7 @@ class test_common_methods:
         This method is used for signing out.
         """
         try:
+            screenshot()
             # Scrolling to the end for signout
             touch = TouchAction(drivers)
             touch.press(x=484, y=1835).move_to(x=546, y=267).release().perform()
@@ -80,7 +81,6 @@ class test_common_methods:
         This method is used to allow all permissions required by the application.
         """
         try:
-            screenshot()
             activity = drivers.current_activity
             print("Current activity is:: ",activity)
             

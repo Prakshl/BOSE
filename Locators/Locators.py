@@ -20,7 +20,8 @@ sign_in_email_1 = '//*[contains(@text, "Sign in with Email")]'
 terms_of_use = "//android.view.View[@index='5']"
 privacy_policy = "//android.view.View[@index='6']"
 licence_agreement = "//android.view.View[@index='7']"
-i_agree = '(//*[@class="android.widget.button"])[1]'
+# i_agree = '(//*[@class="android.widget.button"])[1]'
+i_agree = '(//*[contains(@text, "I Agree")]'
 
 # profile = "com.bose.bosemusic:id/item_account_settings"
 profile = '(//*[@class="android.widget.TextView"])[1]'

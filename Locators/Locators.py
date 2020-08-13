@@ -23,8 +23,9 @@ licence_agreement = "//android.view.View[@index='7']"
 # i_agree = '(//*[@class="android.widget.button"])[1]'
 i_agree = 'gigya-privacy-accept'
 
-profile = '//android.widget.TextView[@content-desc="Bose Account, button"]'
+# profile = '//android.widget.TextView[@content-desc="Bose Account, button"]'
 # profile = '(//*[@class="android.widget.TextView"])[1]'
+profile = 'Bose Account, button'
 sign_out = "com.bose.bosemusic:id/button"
 
 allow_notification = "com.bose.bosemusic:id/primary_button"

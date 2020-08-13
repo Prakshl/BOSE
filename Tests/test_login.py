@@ -24,9 +24,9 @@ def test_login_fill():
 
 
 # Calling method to Allow all required permission
-# def test_allow_all_permission():
-#     assert common_obj.test_allow_permissions()
-#     time.sleep(5)
+def test_allow_all_permission():
+    assert common_obj.test_allow_permissions()
+    time.sleep(5)
 
 # Calling method to open profile
 def test_open_my_profile():

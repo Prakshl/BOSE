@@ -19,6 +19,8 @@ privacy_policy = "//android.view.View[@index='6']"
 licence_agreement = "//android.view.View[@index='7']"
 i_agree = 'gigya-privacy-accept'
 
+# profile = '//android.widget.TextView[@content-desc="Bose Account, button"]'
+# profile = '(//*[@class="android.widget.TextView"])[1]'
 profile = 'Bose Account, button'
 sign_out = "com.bose.bosemusic:id/button"
 

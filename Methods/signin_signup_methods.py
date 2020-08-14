@@ -52,7 +52,7 @@ class common_methods:
         try:
 
             # Opening the profile
-            drivers.find_element_by_accessibility_id(profile).click()
+            drivers.find_element_by_xpath(profile).click()
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):

@@ -127,6 +127,9 @@ class common_methods:
             last_name.clear()
             last_name.send_keys('Reddy')
 
+            # Hide keyboard
+            drivers.hide_keyboard()
+
             # Click on submit button
             drivers.find_element_by_xpath(submit).click()
 
@@ -281,15 +284,17 @@ class common_methods:
             screenshot()
             return False
 
-    def check_version(self):
-        # cmd = "adb shell dumpsys package your.app.package.name.here |grep versionName"
-        # Process process = null;
-
+    def check_version(self,appversion):
+        """This method is used to match installed app version with given app version"""
         try:
 
             app_version = drivers.find_element_by_xpath(application_version)
             version_text = app_version.text
-            print(version_text)
+
+            if (appversion == version_text):
+                print("Installed application version match with given version ")
+            else:
+                print("Installed application version doesn't match. Installed version is"+version_text)
 
             return True
 

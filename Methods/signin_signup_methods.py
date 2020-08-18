@@ -170,8 +170,8 @@ class common_methods:
             time.sleep(2)
 
             # Allow Permission to turn on bluetooth
-            drivers.find_element_by_id(inside_bluetooth).click()
-            time.sleep(5)
+#             drivers.find_element_by_id(inside_bluetooth).click()
+#             time.sleep(5)
 
             # Click on back element
             back()

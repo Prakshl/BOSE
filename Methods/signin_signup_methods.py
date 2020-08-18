@@ -130,17 +130,13 @@ class common_methods:
             last_name = drivers.find_element_by_xpath(change_last_name)
             last_name.clear()
             last_name.send_keys('Reddy')
-<<<<<<< HEAD
 
             # Hide keyboard
             drivers.hide_keyboard()
 
-=======
-           
             # Hide Keyboard
             drivers.hide_keyboard()
           
->>>>>>> 2fe78d8dcbd7d7c85e297c36cd5956b058ea5318
             # Click on submit button
             drivers.find_element_by_xpath(submit).click()
 

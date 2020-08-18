@@ -125,15 +125,15 @@ class common_methods:
             first_name = drivers.find_element_by_xpath(change_first_name)
             first_name.clear()
             first_name.send_keys('Jacob')
-            
-            # Hide Keyboard
-            drivers.hide_keyboard()
                             
             # Change Last name
             last_name = drivers.find_element_by_xpath(change_last_name)
             last_name.clear()
             last_name.send_keys('Reddy')
-
+           
+            # Hide Keyboard
+            drivers.hide_keyboard()
+          
             # Click on submit button
             drivers.find_element_by_xpath(submit).click()
 

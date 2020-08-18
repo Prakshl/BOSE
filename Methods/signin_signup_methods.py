@@ -66,10 +66,14 @@ class common_methods:
         """
 
         try:
-
             # Swipe to the end for signout
-            for i in range(3):
-                drivers.swipe(100, 700, 100, 150)
+
+            touch = TouchAction(drivers)
+            touch.press(x=484, y=1835).move_to(x=546, y=267).release().perform()
+            
+            # Swipe to the end for signout
+#             for i in range(3):
+#                 drivers.swipe(100, 700, 100, 150)
 
             # Click on signout button
             drivers.find_element_by_id(sign_out).click()

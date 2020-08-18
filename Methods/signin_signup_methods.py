@@ -39,7 +39,6 @@ class common_methods:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
-
             return False
 
     # Function to open profile
@@ -68,9 +67,11 @@ class common_methods:
 
         try:
 
-            # Scrolling to the end for signout
-            touch = TouchAction(drivers)
-            touch.press(x=484, y=1835).move_to(x=546, y=267).release().perform()
+            # Swipe to the end for signout
+            for i in range(3):
+                drivers.swipe(100, 700, 100, 150)
+
+            # Click on signout button
             drivers.find_element_by_id(sign_out).click()
 
             return True
@@ -87,8 +88,6 @@ class common_methods:
         """
 
         try:
-            activity = drivers.current_activity
-            print("Current activity is:: ",activity)
 
             # Allow notification
             drivers.find_element_by_id(allow_notification).click()
@@ -106,6 +105,202 @@ class common_methods:
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
             screenshot()
             return False
+
+    def change_name(self):
+        """
+        This method is used to change first name and last name
+        """
+
+        try:
+
+            # Open account info. activity
+            drivers.find_element_by_id(account).click()
+            time.sleep(10)
+
+            # Change First name
+            first_name = drivers.find_element_by_xpath(change_first_name)
+            first_name.clear()
+            first_name.send_keys('Jacob')
+
+            # Change Last name
+            last_name = drivers.find_element_by_xpath(change_last_name)
+            last_name.clear()
+            last_name.send_keys('Reddy')
+
+            # Click on submit button
+            drivers.find_element_by_xpath(submit).click()
+
+            return True
+
+        except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+            screenshot()
+            return False
+
+    def manage_product(self):
+        """
+        This method is used to add new boss product or manage existing product.
+        """
+
+        try:
+
+            # Click on manage product
+            drivers.find_element_by_xpath(inside_manage_product).click()
+            time.sleep(1)
+
+            # Click on edit button
+            drivers.find_element_by_id(inside_manage_product_edit).click()
+            time.sleep(3)
+
+            # Close editing
+            drivers.find_element_by_accessibility_id('Close').click()
+
+            # Click on add product
+            drivers.find_element_by_id(inside_add_product).click()
+            time.sleep(1)
+
+            # Click on Headphones
+            drivers.find_element_by_id(inside_headphone).click()
+            time.sleep(2)
+
+            # Allow Permission to turn on bluetooth
+            drivers.find_element_by_id(inside_bluetooth).click()
+            time.sleep(5)
+
+            # Click on back element
+            back()
+            time.sleep(2)
+
+            # Click on Speakers and soundbars
+            drivers.find_element_by_id(inside_speaker).click()
+            time.sleep(3)
+
+            # Click on back element
+            back()
+            time.sleep(2)
+
+            # Back to Home Activity
+            drivers.find_element_by_accessibility_id('Back to My Products').click()
+            time.sleep(2)
+
+            return True
+
+        except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+            screenshot()
+            return False
+
+    def manage_music(self):
+        """
+        This function is used to manage music services
+        """
+
+        try:
+
+            # Click on manage music element
+            drivers.find_element_by_xpath(manage_music).click()
+            time.sleep(2)
+
+            # Click on add new service
+            drivers.find_element_by_xpath(add_new_service).click()
+            time.sleep(2)
+
+            # Swipe to find element
+            drivers.swipe(100, 700, 100, 150)
+
+            # Call back function to go back
+            back()
+            time.sleep(2)
+
+            # Click on on learn more element
+            drivers.find_element_by_xpath(learn_more).click()
+            time.sleep(1)
+
+            # Click on anonymous account
+            drivers.find_element_by_xpath(tunein_account).click()
+            time.sleep(2)
+
+            # Call back function again to go back
+            back()
+            time.sleep(2)
+
+            # Call back function again to go back
+            back()
+
+            return True
+
+        except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+            screenshot()
+            return False
+
+    def notification(self):
+
+        """
+        This function is used turn off or turn on notification
+        """
+
+        try:
+
+            # Swipe till element is displayed on screen
+            drivers.swipe(100, 700, 100, 150)
+            time.sleep(2)
+
+            # Click on notification switch button
+            drivers.find_element_by_id(notification).click()
+            time.sleep(2)
+
+            # Click on dismiss button
+            drivers.find_element_by_id(notification_dismiss).click()
+
+            return True
+
+        except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+            screenshot()
+            return False
+
+    def data_preference(self):
+        """
+        This method is used to turn off or turn on data analysis from settings
+        """
+
+        try:
+
+            # Swipe till element is displayed on screen
+            for i in range(2):
+                drivers.swipe(100, 700, 100, 150)
+
+            # Click on data preference element
+            drivers.find_element_by_xpath(data_preference).click()
+            time.sleep(2)
+
+            # Click to turn on or off app analysis
+            drivers.find_element_by_id(app_analysis).click()
+            back()
+
+            return True
+
+        except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+            screenshot()
+            return False
+
+    def check_version(self):
+        # cmd = "adb shell dumpsys package your.app.package.name.here |grep versionName"
+        # Process process = null;
+
+        try:
+
+            app_version = drivers.find_element_by_xpath(application_version)
+            version_text = app_version.text
+            print(version_text)
+
+            return True
+
+        except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+            screenshot()
+            return False
+
+
+def back():
+    """This method is used to click on go back element"""
+    drivers.find_element_by_accessibility_id('Back').click()
 
 
 def screenshot():

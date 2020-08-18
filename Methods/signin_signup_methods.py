@@ -66,7 +66,11 @@ class common_methods:
         """
 
         try:
+            # Swipe to the end for signout
 
+#             touch = TouchAction(drivers)
+#             touch.press(x=484, y=1835).move_to(x=546, y=267).release().perform()
+            
             # Swipe to the end for signout
             for i in range(3):
                 drivers.swipe(100, 700, 100, 150)
@@ -121,15 +125,22 @@ class common_methods:
             first_name = drivers.find_element_by_xpath(change_first_name)
             first_name.clear()
             first_name.send_keys('Jacob')
-
+                            
             # Change Last name
             last_name = drivers.find_element_by_xpath(change_last_name)
             last_name.clear()
             last_name.send_keys('Reddy')
+<<<<<<< HEAD
 
             # Hide keyboard
             drivers.hide_keyboard()
 
+=======
+           
+            # Hide Keyboard
+            drivers.hide_keyboard()
+          
+>>>>>>> 2fe78d8dcbd7d7c85e297c36cd5956b058ea5318
             # Click on submit button
             drivers.find_element_by_xpath(submit).click()
 
@@ -166,8 +177,8 @@ class common_methods:
             time.sleep(2)
 
             # Allow Permission to turn on bluetooth
-            drivers.find_element_by_id(inside_bluetooth).click()
-            time.sleep(5)
+#             drivers.find_element_by_id(inside_bluetooth).click()
+#             time.sleep(5)
 
             # Click on back element
             back()

@@ -49,7 +49,7 @@ class common_methods:
         """
 
         try:
-
+            screenshot()
             # Opening the profile
             drivers.find_element_by_xpath(profile).click()
             return True
@@ -272,7 +272,7 @@ class common_methods:
         """
 
         try:
-
+            screenshot()
             # Swipe till element is displayed on screen
             for i in range(2):
                 drivers.swipe(100, 700, 100, 150)

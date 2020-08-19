@@ -57,7 +57,8 @@ tunein_account = '//*[contains(@text,"Anonymous Account")]'
 notification = 'com.bose.bosemusic:id/item_switch'
 notification_dismiss = 'com.bose.bosemusic:id/button_dismiss'
 
-data_preference = '//*[contains(@text,"Data Preferences")]'
+# data_preference = '//*[contains(@text,"Data Preferences")]'
+data_preference = '(//*[@class="android.widget.ImageView"])[3]'
 app_analysis = 'com.bose.bosemusic:id/app_analytics_toggle'
 
 application_version = '(//*[@class="android.widget.TextView"])[11]'

@@ -298,10 +298,10 @@ class common_methods:
             app_version = drivers.find_element_by_xpath(application_version)
             version_text = app_version.text
 
-            if app_version == '3.5.6':
+            if str(app_version) == '3.5.6' :
                 print("Installed application version match with given version ")
             else:
-                print("Installed application version doesn't match. Installed version is"+version_text)
+                print("Installed application version doesn't match. Installed version is: "+version_text)
 
             return True
 

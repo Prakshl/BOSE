@@ -296,7 +296,7 @@ class common_methods:
             if app_version == '3.5.6':
                 print("Installed application version match with given version ")
             else:
-                print(type(app_version))
+                print('type:',type(app_version))
                 print("Installed application version doesn't match. Installed version is: "+version_text)
 
             return True

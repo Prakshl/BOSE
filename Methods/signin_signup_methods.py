@@ -291,14 +291,14 @@ class common_methods:
             screenshot()
             return False
 
-    def check_version(self,appversion):
+    def check_version(self):
         """This method is used to match installed app version with given app version"""
         try:
 
             app_version = drivers.find_element_by_xpath(application_version)
             version_text = app_version.text
 
-            if (appversion == version_text):
+            if app_version == '3.5.6':
                 print("Installed application version match with given version ")
             else:
                 print("Installed application version doesn't match. Installed version is"+version_text)

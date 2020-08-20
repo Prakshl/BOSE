@@ -7,9 +7,10 @@ login_obj = Login()
 common_obj = common_methods()
 
 
- # Calling Desired Caps method
+# Calling Desired Caps method
 def test_desired_capabilities(platformname, udid, platformversion):
     assert common_obj.desired_caps(platformname, udid, platformversion)
+
 
 # Calling method to click on signin and sign with email
 def test_login_btn():
@@ -36,9 +37,10 @@ def test_open_my_profile():
 
 
 # Match version
-def test_check(appversion):
-    assert common_obj.check_version(appversion)
+def test_check():
+    assert common_obj.check_version()
     time.sleep(2)
+
 
 # Signout method
 def test_sign_out():

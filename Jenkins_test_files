@@ -2,7 +2,7 @@
 
     agent { label 'E2E_D_AirPlayMacMini' }
 
-   stages{
+    stages{
 
          stage("Installing Requirements"){
             steps{
@@ -92,3 +92,6 @@
                 """
             }
         }
+        
+   }
+}

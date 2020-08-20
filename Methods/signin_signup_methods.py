@@ -49,7 +49,6 @@ class common_methods:
         """
 
         try:
-            screenshot()
             # Opening the profile
             drivers.find_element_by_xpath(profile).click()
             return True
@@ -66,10 +65,6 @@ class common_methods:
         """
 
         try:
-            # Swipe to the end for signout
-
-#             touch = TouchAction(drivers)
-#             touch.press(x=484, y=1835).move_to(x=546, y=267).release().perform()
             
             # Swipe to the end for signout
             for i in range(3):
@@ -272,7 +267,7 @@ class common_methods:
         """
 
         try:
-            screenshot()
+
             # Swipe till element is displayed on screen
             for i in range(2):
                 drivers.swipe(100, 700, 100, 150)
@@ -298,9 +293,10 @@ class common_methods:
             app_version = drivers.find_element_by_xpath(application_version)
             version_text = app_version.text
 
-            if str(app_version) == '3.5.6' :
+            if app_version == '3.5.6':
                 print("Installed application version match with given version ")
             else:
+                print(type(app_version))
                 print("Installed application version doesn't match. Installed version is: "+version_text)
 
             return True

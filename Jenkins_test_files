@@ -14,21 +14,6 @@
             }
         }
 
-        stage("run Login test file"){
-            steps{
-
-                sh """
-                . test_environment/bin/activate
-                python --version
-
-                pytest -vs Tests/test_login.py --platformname Android --udid 988a90363239513753 --platformversion 8.0.0
-
-                deactivate
-                """
-               }
-        }
-
-       
 
         stage("run change name test file"){
             steps{

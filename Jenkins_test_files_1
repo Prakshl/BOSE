@@ -1,6 +1,6 @@
  pipeline{
 
-    agent { label 'E2E_D_AirPlayMacMini' }
+    agent any
 
     stages{
 

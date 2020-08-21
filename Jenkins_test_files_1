@@ -7,7 +7,7 @@
         stage("Create virtual-env"){
             steps{
                  bat """
-                 python3 -m venv virtual_environment
+                 python -m venv virtual_environment
                  . test_environment/bin/activate
                  pip3 install -r requirements.txt
                 """

@@ -8,7 +8,7 @@
             steps{
                  bat """
                  python -m venv virtual_environment
-                 . test_environment/bin/activate
+                 source test_environment/bin/activate
                  pip install -r requirements.txt
                 """
             }

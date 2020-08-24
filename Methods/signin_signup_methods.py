@@ -54,6 +54,7 @@ class common_methods:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+            print("Error while opening profile")
             screenshot()
             return False
 

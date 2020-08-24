@@ -1,12 +1,11 @@
-import time
-import string
 import random
+import string
+import time
 
 from appium import webdriver
-from appium.webdriver.common.touch_action import TouchAction
 from selenium.common.exceptions import NoSuchElementException
-from selenium.common.exceptions import WebDriverException
 from selenium.common.exceptions import RemoteDriverServerException
+from selenium.common.exceptions import WebDriverException
 
 from Locators.Locators import *
 from Log.log import *
@@ -54,7 +53,7 @@ class common_methods:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
-            print("Error while opening profile")
+            print("Error occurred while opening profile")
             screenshot()
             return False
 
@@ -77,6 +76,7 @@ class common_methods:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+            print("Error occurred while signing-out")
             screenshot()
             return False
 
@@ -103,6 +103,7 @@ class common_methods:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+            print("Error occurred while allowing permissions")
             screenshot()
             return False
 
@@ -139,6 +140,7 @@ class common_methods:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+            print("Error occurred while changing name")
             screenshot()
             return False
 
@@ -191,6 +193,7 @@ class common_methods:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+            print("Error occurred while managing product")
             screenshot()
             return False
 
@@ -234,6 +237,7 @@ class common_methods:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+            print("Error occurred while managing music")
             screenshot()
             return False
 
@@ -259,6 +263,7 @@ class common_methods:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+            print("Error occurred while selecting notification")
             screenshot()
             return False
 
@@ -284,6 +289,7 @@ class common_methods:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+            print("Error occurred while allowing data permission")
             screenshot()
             return False
 
@@ -302,6 +308,7 @@ class common_methods:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+            print("Error occurred while checking app. version")
             screenshot()
             return False
 

@@ -49,7 +49,7 @@ class common_methods:
 
         try:
             # Opening the profile
-            drivers.find_element_by_xpath(profile).click()
+            drivers.find_element_by_id(profile).click()
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):

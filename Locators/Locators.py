@@ -22,7 +22,8 @@ i_agree = 'gigya-privacy-accept'
 
 
 # profile = '//android.widget.TextView[@content-desc="Bose Account, button"]'
-profile = '(//*[@class="android.widget.TextView"])[1]'
+# profile = '(//*[@class="android.widget.TextView"])[1]'
+profile = 'item_account_settings'
 # profile = 'Bose Account, button'
 
 # account = '(//*[@class="android.view.ViewGroup"])[1]'

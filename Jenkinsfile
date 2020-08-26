@@ -8,7 +8,7 @@
             steps{
                 script{
 
-                     def workspace_link = "<a href=http://localhost:8080/job/" + JOB_NAME + "/" + BUILD_NUMBER + "/execution/node/3/ws/'>Workspace</a>";
+                     def workspace_link = "<a https://eco2jenkins.bose.com/job/" + JOB_NAME + "/" + BUILD_NUMBER + "/execution/node/3/ws/'>Workspace</a>";
                      manager.createSummary("green.gif").appendText("<h1>" + workspace_link + "</h1>", false, false, false, "blue");
 
                 }

@@ -110,6 +110,7 @@
         post {
             always {
                 archiveArtifacts artifacts: 'build/libs/**/*.png', fingerprint: true
+                junit 'build/reports/**/*.xml'
             }
         }
 }

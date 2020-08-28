@@ -49,7 +49,7 @@ class common_methods:
 
         try:
             # Opening the profile
-            drivers.find_element_by_xpath(profile1).click()
+            drivers.find_element_by_xpath(profile2).click()
             screenshot()
             return True
 

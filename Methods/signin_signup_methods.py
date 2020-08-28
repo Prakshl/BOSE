@@ -48,19 +48,15 @@ class common_methods:
         """
 
         try:
-            profile_1 = drivers.find_element_by_id(profile)
-            profile_2 = drivers.find_element_by_xpath(profile1)
-            profile_3 = drivers.find_element_by_xpath(profile2)
-
             # Opening the profile
-            if profile_1.is_displayed():
-                profile_1.click()
+            if drivers.find_element_by_id(profile):
+                drivers.find_element_by_id(profile).click()
 
-            elif profile_2.is_displayed():
-                profile_2.click()
+            elif drivers.find_element_by_xpath(profile1):
+                drivers.find_element_by_xpath(profile).click()
 
-            elif profile_3.is_displayed():
-                profile_3.click()
+            elif drivers.find_element_by_xpath(profile2):
+                drivers.find_element_by_xpath(profile2).click()
 
             else:
                 print("No element found")

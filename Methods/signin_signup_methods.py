@@ -48,8 +48,24 @@ class common_methods:
         """
 
         try:
+            profile_1 = drivers.find_element_by_id(profile)
+            profile_2 = drivers.find_element_by_xpath(profile1)
+            profile_3 = drivers.find_element_by_xpath(profile2)
+
             # Opening the profile
-            drivers.find_element_by_id(profile).click()
+            if profile_1.is_displayed():
+                profile_1.click()
+
+            elif profile_2.is_displayed():
+                profile_2.click()
+
+            elif profile_3.is_displayed():
+                profile_3.click()
+
+            else:
+                print("No element found")
+
+            # drivers.find_element_by_id(profile).click()
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):

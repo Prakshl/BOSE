@@ -20,9 +20,8 @@ licence_agreement = "//android.view.View[@index='7']"
 i_agree = 'gigya-privacy-accept'
 
 
-
-# profile = '//android.widget.TextView[@content-desc="Bose Account, button"]'
-# profile = '(//*[@class="android.widget.TextView"])[1]'
+profile1 = '//android.widget.TextView[@content-desc="Bose Account, button"]'
+profile2 = '(//*[@class="android.widget.TextView"])[1]'
 profile = 'item_account_settings'
 # profile = 'Bose Account, button'
 

@@ -50,7 +50,7 @@ class common_methods:
         try:
             # Opening the profile
             print("PROFILE")
-            drivers.find_element_by_id(profile).click()
+            drivers.find_element_by_xpath(profile1).click()
             screenshot()
             return True
 

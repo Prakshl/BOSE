@@ -50,12 +50,15 @@ class common_methods:
         try:
             # Opening the profile
             if drivers.find_element_by_id(profile):
+                print("Found element 1")
                 drivers.find_element_by_id(profile).click()
 
             elif drivers.find_element_by_xpath(profile1):
+                print("Found element 2")
                 drivers.find_element_by_xpath(profile).click()
 
             elif drivers.find_element_by_xpath(profile2):
+                print("Found element 3")
                 drivers.find_element_by_xpath(profile2).click()
 
             else:

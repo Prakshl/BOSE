@@ -113,7 +113,10 @@
     }
         post {
             always {
-                copyArtifacts filter: 'Workspace/Log/log.log', fingerprintArtifacts: true, projectName: '${JOB_NAME}', selector: specific('${BUILD_NUMBER}')
+//                copyArtifacts filter: 'Workspace/Log/log.log', fingerprintArtifacts: true, projectName: '${JOB_NAME}', selector: specific('${BUILD_NUMBER}')
+//                copyArtifacts(projectName: currentBuil
+                archiveArtifacts artifacts: 'pipeline_work_practice/log/*.log, pipeline_work_practice/log/*.log', fingerprint: true
+
                  }
             }
         }

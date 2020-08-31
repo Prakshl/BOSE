@@ -108,7 +108,7 @@
     }
         post {
             always {
-                archiveArtifacts artifacts: '${WORKSPACE}/Screenshot/**/*.png', fingerprint: true
+                archiveArtifacts artifacts: '${WORKSPACE}/log/**/*.log', fingerprint: true
             }
         }
 }

@@ -26,13 +26,13 @@ def test_login_fill():
 # Calling method to Allow all required permission
 def test_allow_all_permission():
     assert common_obj.allow_permissions()
-    time.sleep(5)
+    time.sleep(9)
 
 
 # Calling method to open profile
 def test_open_my_profile():
     assert common_obj.open_profile()
-    time.sleep(9)
+    time.sleep(10)
 
 def test_manage_music():
     assert common_obj.manage_music()

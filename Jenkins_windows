@@ -5,7 +5,7 @@
     stages{
         stage('Fetch Artifact') {
           steps {
-            step([$class: 'CopyArtifact', projectName: '${WORKSPACE}', filter: '${WORKSPACE}/Log'])
+            step([$class: 'CopyArtifact', projectName: JOB_NAME, filter: '${WORKSPACE}/Log'])
           }
         }
 

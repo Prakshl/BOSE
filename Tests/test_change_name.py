@@ -6,6 +6,7 @@ login_obj = Login()
 # Object of Common methods class
 common_obj = common_methods()
 
+
 # Calling Desired Caps method
 def test_desired_capabilities(platformname, udid, platformversion):
     assert common_obj.desired_caps(platformname, udid, platformversion)
@@ -26,7 +27,7 @@ def test_login_fill():
 # Calling method to Allow all required permission
 def test_allow_all_permission():
     assert common_obj.allow_permissions()
-    time.sleep(5)
+    time.sleep(9)
 
 
 # Calling method to open profile

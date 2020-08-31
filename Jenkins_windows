@@ -112,6 +112,6 @@
     }
         post {
             always {
-                copyArtifacts filter: 'Screenshot', fingerprintArtifacts: true, projectName: '${JOB_NAME}', selector: specific('${BUILD_NUMBER}')            }
+                copyArtifacts filter: '${WORKSPACE}/Log', fingerprintArtifacts: true, projectName: '${JOB_NAME}', selector: specific('${BUILD_NUMBER}')            }
         }
 }

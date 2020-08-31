@@ -3,7 +3,11 @@
     agent any
 
     stages{
-
+        stage('Fetch Artifact') {
+          steps {
+            step([$class: 'CopyArtifact', projectName: '${WORKSPACE}', filter: '${WORKSPACE}/Log'])
+          }
+        }
 
         stage("run Login test file"){
             steps{

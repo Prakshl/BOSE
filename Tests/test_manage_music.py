@@ -36,7 +36,7 @@ def test_open_my_profile():
 
 def test_manage_music():
     assert common_obj.manage_music()
-    time.sleep(5)
+    time.sleep(10)
 
 
 # Signout method

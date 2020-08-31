@@ -108,8 +108,7 @@
     }
         post {
             always {
-                archiveArtifacts artifacts: 'build/Screenshot/**/*.png', fingerprint: true
-                junit 'build/Screenshot/**/*.png'
+                archiveArtifacts artifacts: '${WORKSPACE}/Screenshot/**/*.png', fingerprint: true
             }
         }
 }

@@ -5,7 +5,7 @@
     stages{
         stage('Fetch Artifact') {
           steps {
-            step([$class: 'CopyArtifact', projectName: JOB_NAME, filter: '${WORKSPACE}/Log'])
+            step([$class: 'CopyArtifact', projectName: 'pipeline_work_practice', filter: '${WORKSPACE}/Log'])
           }
         }
 
@@ -112,7 +112,6 @@
     }
         post {
             always {
-                archiveArtifacts artifacts: '${WORKSPACE}/log/**/*.log', fingerprint: true
-            }
+                copyArtifacts filter: 'Screenshot', fingerprintArtifacts: true, projectName: '${JOB_NAME}', selector: specific('${BUILD_NUMBER}')            }
         }
 }

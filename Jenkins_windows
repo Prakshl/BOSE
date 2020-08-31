@@ -108,8 +108,8 @@
     }
         post {
             always {
-                archiveArtifacts artifacts: 'build/libs/**/*.png', fingerprint: true
-                junit 'build/reports/**/*.xml'
+                archiveArtifacts artifacts: 'build/Screenshot/**/*.png', fingerprint: true
+                junit 'build/Screenshot/**/*.png'
             }
         }
 }

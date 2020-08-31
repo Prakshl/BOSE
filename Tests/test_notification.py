@@ -32,7 +32,7 @@ def test_allow_all_permission():
 # Calling method to open profile
 def test_open_my_profile():
     assert common_obj.open_profile()
-    time.sleep(4)
+    time.sleep(9)
 
 
 # Calling method to turn on or off notification

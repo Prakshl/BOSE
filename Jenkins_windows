@@ -113,9 +113,8 @@
     }
         post {
             always {
-                script{def reportPath = "${WORKSPACE}/Log"}
 //                archiveArtifacts artifacts: '${WORKSPACE}/log/*.log', fingerprint: true
-                copyArtifacts filter: reportPath, fingerprintArtifacts: true, projectName: '${JOB_NAME}', selector: specific('${BUILD_NUMBER}')
+                copyArtifacts filter: '${WORKSPACE}/log/*.log', fingerprintArtifacts: true, projectName: '${JOB_NAME}', selector: specific('${BUILD_NUMBER}')
                   }
             }
         }

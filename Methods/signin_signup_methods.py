@@ -49,9 +49,7 @@ class common_methods:
 
         try:
             # Opening the profile
-            print("PROFILE")
             drivers.find_element_by_id(profile).click()
-            screenshot()
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):

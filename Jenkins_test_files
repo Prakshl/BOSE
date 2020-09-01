@@ -110,6 +110,7 @@
    post{
        always{
             archiveArtifacts artifacts: 'Screenshot/*.png', fingerprint: true
+            cleanWs()
        }
    }
 }

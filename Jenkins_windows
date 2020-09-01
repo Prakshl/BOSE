@@ -114,13 +114,9 @@
         post {
             always {
 //                copyArtifacts filter: '**/*.log', fingerprintArtifacts: true, projectName: '${JOB_NAME}', selector: specific('${BUILD_NUMBER}')
-                  script{
-                          def exists = fileExists '/Log'
 
-                          if (exists) {
-                                 archiveArtifacts artifacts: 'Screenshot/*', fingerprint: true
-                          }
-                  }
+                  archiveArtifacts artifacts: 'Screenshot/*', fingerprint: true
+
                   cleanWs()
                  }
             }

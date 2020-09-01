@@ -114,7 +114,7 @@
         post {
             always {
 //                copyArtifacts filter: '**/*.log', fingerprintArtifacts: true, projectName: '${JOB_NAME}', selector: specific('${BUILD_NUMBER}')
-                  archiveArtifacts artifacts: '**/*.py', fingerprint: true
+                  archiveArtifacts artifacts: '**/Log', fingerprint: true
                  }
             }
         }

@@ -109,7 +109,14 @@
 
    post{
        always{
-            archiveArtifacts artifacts: 'Screenshot/*.png', fingerprint: true
+            script{
+                 def exists = fileExists '/Screenshot'
+
+                 if (exists)
+                 {
+                      archiveArtifacts artifacts: 'Screenshot/*.png', fingerprint: true
+                 }
+            }
             cleanWs()
        }
    }

@@ -118,7 +118,7 @@
                           def exists = fileExists '/Log'
 
                           if (exists) {
-                               archiveArtifacts artifacts: 'Log/*.log', fingerprint: true
+                                 archiveArtifacts artifacts: 'Screenshot/*', fingerprint: true
                           }
                   }
                   cleanWs()

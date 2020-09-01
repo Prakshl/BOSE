@@ -115,15 +115,12 @@
             always {
 //                copyArtifacts filter: '**/*.log', fingerprintArtifacts: true, projectName: '${JOB_NAME}', selector: specific('${BUILD_NUMBER}')
                   script{
-                          def exists = fileExists '/Screnshot'
+                          def exists = fileExists '/Log'
 
                           if (exists) {
-                              sh "LINUX SHELL COMMAND"
-                          } else {
-                              println "File doesn't exist"
+                               archiveArtifacts artifacts: 'Log/*.log', fingerprint: true
                           }
                   }
-                  archiveArtifacts artifacts: 'Log/*.log', fingerprint: true
                   cleanWs()
                  }
             }

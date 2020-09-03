@@ -257,7 +257,7 @@ class common_methods:
             return False
 
     @log
-    # Function to allow or deny permission
+    # Function to turn on or off notification
     def notification(self):
 
         """

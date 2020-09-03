@@ -38,6 +38,7 @@ class common_methods:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+
             return False
 
     # Function to open profile
@@ -53,8 +54,10 @@ class common_methods:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+
             print("Error occurred while opening profile")
             screenshot()
+
             return False
 
     @log
@@ -65,7 +68,7 @@ class common_methods:
         """
 
         try:
-            
+
             # Swipe to the end for signout
             for i in range(3):
                 drivers.swipe(100, 700, 100, 150)
@@ -76,8 +79,10 @@ class common_methods:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+
             print("Error occurred while signing-out")
             screenshot()
+
             return False
 
     @log
@@ -103,10 +108,14 @@ class common_methods:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+
             print("Error occurred while allowing permissions")
             screenshot()
+
             return False
 
+    @log
+    # Function for chcange name
     def change_name(self):
         """
         This method is used to change first name and last name
@@ -122,7 +131,7 @@ class common_methods:
             first_name = drivers.find_element_by_xpath(change_first_name)
             first_name.clear()
             first_name.send_keys('Jacob')
-                            
+
             # Change Last name
             last_name = drivers.find_element_by_xpath(change_last_name)
             last_name.clear()
@@ -133,17 +142,21 @@ class common_methods:
 
             # Hide Keyboard
             drivers.hide_keyboard()
-          
+
             # Click on submit button
             drivers.find_element_by_xpath(submit).click()
 
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+
             print("Error occurred while changing name")
             screenshot()
+
             return False
 
+    @log
+    # Function to manage products
     def manage_product(self):
         """
         This method is used to add new boss product or manage existing product.
@@ -170,10 +183,6 @@ class common_methods:
             drivers.find_element_by_id(inside_headphone).click()
             time.sleep(2)
 
-            # Allow Permission to turn on bluetooth
-#             drivers.find_element_by_id(inside_bluetooth).click()
-#             time.sleep(5)
-
             # Click on back element
             back()
             time.sleep(2)
@@ -193,10 +202,14 @@ class common_methods:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+
             print("Error occurred while managing product")
             screenshot()
+
             return False
 
+    @log
+    # Function to manage music
     def manage_music(self):
         """
         This function is used to manage music services
@@ -237,10 +250,14 @@ class common_methods:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+
             print("Error occurred while managing music")
             screenshot()
+
             return False
 
+    @log
+    # Function to allow or deny permission
     def notification(self):
 
         """
@@ -263,10 +280,14 @@ class common_methods:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+
             print("Error occurred while selecting notification")
             screenshot()
+
             return False
 
+    @log
+    # Function to turn on and turn off data preference
     def data_preference(self):
         """
         This method is used to turn off or turn on data analysis from settings
@@ -289,10 +310,14 @@ class common_methods:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+
             print("Error occurred while allowing data permission")
             screenshot()
+
             return False
 
+    @log
+    # Function to check application version
     def check_version(self):
         """This method is used to match installed app version with given app version"""
         try:
@@ -303,13 +328,15 @@ class common_methods:
             if version_text == '3.5.6':
                 print("Installed application version match with given version ")
             else:
-                print("Installed application version doesn't match. Installed version is: "+version_text)
+                print("Installed application version doesn't match. Installed version is: " + version_text)
 
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+
             print("Error occurred while checking app. version")
             screenshot()
+
             return False
 
 
@@ -349,7 +376,9 @@ class Sign_up:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+
             screenshot()
+
             return False
 
     @log
@@ -397,7 +426,9 @@ class Sign_up:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+
             screenshot()
+
             return False
 
     @log
@@ -423,7 +454,9 @@ class Sign_up:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+
             screenshot()
+
             return False
 
 
@@ -448,7 +481,9 @@ class Login:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+
             screenshot()
+
             return False
 
     @log
@@ -474,5 +509,7 @@ class Login:
             return True
 
         except (NoSuchElementException, WebDriverException, RemoteDriverServerException):
+
             screenshot()
+
             return False

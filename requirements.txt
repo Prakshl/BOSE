@@ -14,7 +14,7 @@ Deprecated==1.2.10
 deprecation==2.1.0
 idna==2.10
 logzero==1.5.0
-lxml==4.5.2
+lxml==4.6.2
 mkdirs==0.0.5a0
 more-itertools==8.4.0
 packaging==20.4

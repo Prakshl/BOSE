@@ -4,7 +4,7 @@ Appium-Python-Client==1.0.2
 atomicwrites==1.4.0
 attrs==19.3.0
 cached-property==1.5.1
-certifi==2020.6.20
+certifi==2022.12.7
 chardet==3.0.4
 cigam==0.0.3
 cmd2==1.2.1
